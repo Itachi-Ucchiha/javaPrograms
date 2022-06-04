@@ -26,13 +26,26 @@ public class HelloWorld {
     System.out.println("Enter the Salary: ");
     int salary = sc.nextInt();
 
-    // ------- To beautify the salary slip ------
+    // ------- To beautify the salary slip ---------------------
         
     Locale locale = new Locale("en","US");
     NumberFormat nf = NumberFormat.getCurrencyInstance(locale);
     String formatSalary = nf.format(salary);
         
     // --------------------------------------------
+        
+        
+      // displaying dates in java
+    Date date = new Date();
+ 
+
+    //  Dateformat calll from util ....works same as Numberformat
+    //  2 main styles = DateFormat.SHORT and DateFormat.LONG
+    DateFormat df = DateFormat.getDateInstance(DateFormat.LONG, locale);
+    String formattedDate = df.format(date);     //// format method of DateFormat class
+    System.out.println("the date is : "+formattedDate); 
+        
+     //--------------------------------------------------
 
     System.out.println("id is: "+id);
     System.out.println("welcome: " + fullName);
